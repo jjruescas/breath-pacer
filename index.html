@@ -16,14 +16,14 @@
         }
 
         .container {
-            width: 100px; /* Keep the original width of the pillar */
+            width: 100px; /* Pillar width */
             height: 60vh;
             background-color: #e6e6e6; /* Light gray background for the empty pillar */
             position: relative;
             overflow: hidden;
             border-radius: 10px;
             border: 2px solid #f57f01; /* Border matching the brand color */
-            margin-bottom: 20px; /* Space between the pillar and the logo */
+            margin-bottom: 20px;
         }
 
         .pillar {
@@ -32,29 +32,24 @@
             background-color: #f57f01; /* Brand orange color for the filling pillar */
             position: absolute;
             bottom: -100%;
-            animation: breathe 8s infinite;
+            animation: breathe 10s infinite;
         }
 
         @keyframes breathe {
             0%, 100% {
                 bottom: -100%;
             }
-            50% {
+            40% { /* Inhale for 4 seconds (40% of 10s) */
                 bottom: 0;
             }
-        }
-
-        .logo {
-            width: 50px; /* Proportionate width to the pillar */
-            height: auto;
+            100% { /* Exhale for 6 seconds (remaining 60% of 10s) */
+                bottom: -100%;
+            }
         }
 
         @media (max-width: 600px) {
             .container {
                 height: 40vh; /* Adjusting only height for smaller screens */
-            }
-            .logo {
-                width: 40px; /* Smaller logo for mobile */
             }
         }
     </style>
@@ -63,8 +58,9 @@
     <div class="container">
         <div class="pillar"></div>
     </div>
+
     <script>
-        // The pillar fills up for 4 seconds (inhale) and descends for 4 seconds (exhale)
+        // The pillar fills up for 4 seconds (inhale) and descends for 6 seconds (exhale)
     </script>
 </body>
 </html>
