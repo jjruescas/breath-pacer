@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breath Pacer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            border-radius: 50%;
+            animation: breathe 8s infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+
+    <script>
+        // Adjust the timing for inhale and exhale if needed
+        // Currently set to 4 seconds for inhale and 4 seconds for exhale
+    </script>
+</body>
+</html>
