@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* body {
+        height: 10svh;
+        width: 100svw;
+      } */
+      #protime-container {
+        min-width: 300px;
+        min-height: 150px;
+        margin: 0;
+        position: fixed;
+        padding: 10px;
+        background: black;
+        white-space: nowrap;
+        display: inline-block;
+        /* outline: 2px red solid; */
+        /* outline-offset: 20px; */
+        cursor: move;
+        border-radius: 4px;
+      }
+      .resizer {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        resize: both;
+        overflow: hidden;
+      }
+      .resizer > .resized {
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        border: 0;
+      }
+
+      body {
+            display: fixed;
+            height:18rem;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: #ffffff; /* White background for the whole page */
+            margin: 0;
+        }
+
+        .container {
+           /* Pillar width */
+           height:18rem;
+            background-color: #e6e6e6; /* Light gray background for the empty pillar */
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 2px solid #f57f01; /* Border matching the brand color */
+            margin-bottom: 20px;
+        }
+
+        .pillar {
+            width: 100%;
+            height: 100%;
+            background-color: #f57f01; /* Brand orange color for the filling pillar */
+            position: absolute;
+            bottom: -100%;
+            animation: breathe 10s infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                bottom: -100%;
+            }
+            40% { /* Inhale for 4 seconds (40% of 10s) */
+                bottom: 0;
+            }
+            100% { /* Exhale for 6 seconds (remaining 60% of 10s) */
+                bottom: -100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                height: 40vh; /* Adjusting only height for smaller screens */
+            }
+        }
+    </style>
+    <title>ProTime</title>
+  </head>
+  <!-- <body> -->
+  <body id="protime-container" draggable="true">
+    <div class="resizer">
+      <h1>sdssssssssssssssssssssssssssssssss</h1>
+    </div>
+    <script src="script.js"></script>
+  </body>
+  <!-- </body> -->
+</html>

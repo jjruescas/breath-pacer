@@ -6,18 +6,18 @@
     <title>Breath Pacer - Pillar</title>
     <style>
         body {
-            display: flex;
-            flex-direction: column;
+            display: fixed;
+            height:18rem;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            
             background-color: #ffffff; /* White background for the whole page */
             margin: 0;
         }
 
         .container {
-            width: 100px; /* Pillar width */
-            height: 60vh;
+           /* Pillar width */
+           height:18rem;
             background-color: #e6e6e6; /* Light gray background for the empty pillar */
             position: relative;
             overflow: hidden;
@@ -54,7 +54,7 @@
         }
     </style>
 </head>
-<body>
+<body draggable="true">
     <div class="container">
         <div class="pillar"></div>
     </div>
